@@ -1,0 +1,69 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+</head>
+<body>
+    <h1>User List</h1>
+
+    <!-- Form Section 
+    <form method="POST">
+        {% csrf_token %}
+        <label for="fname">FIRSTNAME:</label>
+        <input type="text" name="name" required>
+        
+        <p>
+        <label for="lname">LASTNAME:</label>
+        <input type="text" name="lname" required>
+        </p>
+        
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>Registered Users:</h2>
+    <ul>
+        {% for user in users %}
+        <li>{{ user.firstname }} - {{ user.lastname }}</li>
+        {% empty %}
+        <li>No users added yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}" />
+</head>
+<div class="container">
+    <nav class="navbar">
+      <a href="{% url 'home' %}" class="nav-link">Home</a>
+      <a href="{% url 'about' %}" class="nav-link">About</a>
+      <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+      <a href="{% url 'all_members' %}" class="nav-link">All Members</a>
+    </nav>
+</div>
+<body bgcolor="green">
+    
+    <h1>CREATE USER</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p><button type="submit">Add User</button></p>
+    </form>
+    
+    <footer style="margin-top:30%">
+        <div class="container">
+          <p>&copy; 
+           All Rights Reserved.</p>
+          <p>2024</p>
+        </div>
+    </footer>
+</body>
+</html>

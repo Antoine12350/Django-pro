@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="{% url 'home' %}" class="nav-link">Home</a>
+          <a href="{% url 'about' %}" class="nav-link">About</a>
+          <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+          <a href="{% url 'all_members' %}" class="nav-link">All Members</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="content">
+        <h1>
+          WELCOME TO OUR POTIFOLIO SITE
+        </h1>
+        <h2>MONEY MAKERS</h2>
+        <p>
+            Freelancing: Offer services like writing, graphic design, web development, or digital marketing on platforms like Upwork, Fiverr, or Freelancer.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <p>&copy; 
+         All Rights Reserved.</p>
+        <p>2024</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
